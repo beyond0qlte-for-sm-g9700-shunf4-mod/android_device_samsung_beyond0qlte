@@ -18,7 +18,7 @@
 
 DEVICE_PATH := device/samsung/beyond0qlte
 
-WITH_GMS := true
+#WITH_GMS := true
 
 # APEX
 #DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -28,7 +28,7 @@ TARGET_FLATTEN_APEX := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Board
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+#TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_beyond0qlte_defconfig
@@ -71,4 +71,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
+# Vendor init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_beyond0qlte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_beyond0qlte
 
