@@ -67,12 +67,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_beyond0qlte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_beyond0qlte
+#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_beyond0qlte
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_beyond0qlte
 
