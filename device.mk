@@ -33,8 +33,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/audio_policy_configuration.xml
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung
+#PRODUCT_PACKAGES += \
+#    android.hardware.biometrics.fingerprint@2.1-service.samsung
 
 # Init
 PRODUCT_PACKAGES += \
