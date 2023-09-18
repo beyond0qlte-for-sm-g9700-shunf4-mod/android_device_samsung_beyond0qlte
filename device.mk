@@ -23,27 +23,14 @@ endif
 
 PRODUCT_SHIPPING_API_LEVEL := 28
 
+# Init files
+PRODUCT_PACKAGES += \
+    init.beyond0q.rc
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage
-
-# HIDL Manifest
-# Because we don't include vendor and odm partition in .zip, DEVICE_MANIFEST_FILE can't be used
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/beyond0qlte_lineageos_fm_manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/vintf/manifest/beyond0qlte_lineageos_fm_manifest.xml
-
-# Audio
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/audio_policy_configuration.xml
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung
-
-# Init
-PRODUCT_PACKAGES += \
-	fstab.qcom
 
 # Lights
 #PRODUCT_PACKAGES += \

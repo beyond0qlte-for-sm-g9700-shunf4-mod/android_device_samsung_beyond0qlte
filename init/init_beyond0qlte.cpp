@@ -56,7 +56,7 @@ void property_override_dual(char const system_prop[], char const vendor_prop[],
 void vendor_load_properties()
 {
     // fingerprint
-    property_override("ro.build.description", "beyond0qltesq-user 11 RP1A.200720.012 G970USQS4FUA1 release-keys");
+    property_override("ro.build.description", "beyond0qltesq-user 13 RP1A.200720.012 G970USQS4FUA1 release-keys");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     // privapp permisison control
