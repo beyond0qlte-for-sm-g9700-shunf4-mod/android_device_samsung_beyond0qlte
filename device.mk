@@ -25,7 +25,7 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Init files
 PRODUCT_PACKAGES += \
-    init.beyond0q.rc
+    init.beyond0qlte.rc
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
